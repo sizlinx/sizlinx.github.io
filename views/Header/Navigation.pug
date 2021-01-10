@@ -1,0 +1,35 @@
+-
+  const guidebook = [
+    { text:'Home',  href:'/' },
+    { text:'Blog',  href:'/blog', target:'_blank' },
+    { text:'Github',  href:'https://github.com/sizlinx', target:'_blank' },
+    { text:'Email',  href:'mailto:sizlinx.gmail.com', target:'_blank' },
+    { text:'Twitter', href:'https://twitter.com/sizlinx', target:'_blank' }  
+  ];
+
+nav
+  ul
+    each guide in guidebook
+      li: a(href=guide.href)= guide.text
+
+style.
+  header > nav {
+    margin-top: 35px;
+  }
+  header > nav ul {
+    list-style: none
+  }
+  header > nav ul li {
+    margin: 0 15px;
+    display: inline-block;
+  }
+  header > nav ul li a {
+    font-size: 1.05em;
+    font-weight: 300;
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.3s;
+  }
+  header > nav ul li a:hover {
+    color: #ed5207;
+  }
